@@ -200,17 +200,6 @@ h1,h2,h3,h4,h5,h6{
     border-bottom:var(--mc-content-border);
     border-radius:var(--mc-content-border-radius)
 }
-@media(max-width: 420px){
-    .main-content-title-main-info{
-        flex-direction: column;
-    }
-    .main-content-title-texts-title{
-        text-align:center;
-    }
-    .main-content-title-texts-description{
-        margin-top:0;
-    }
-}
 
 .infobox{
     display:flex;
@@ -219,6 +208,11 @@ h1,h2,h3,h4,h5,h6{
     background:var(--ib-color-background);
     border:var(--ib-border);
     border-radius: var(--ib-border-radius);
+    float:right;
+    max-width: 420px;
+    min-width: 200px;
+    width: 50%;
+    margin-left:10px;
 }
 .tbody, td, tfoot, th, thead, tr{
     padding:2px 5px 2px 5px;
@@ -230,4 +224,24 @@ h1,h2,h3,h4,h5,h6{
 .infobox-table-value{
     background:var(--ib-table-value-color);
     border-top:var(--ib-table-border);
+}
+
+
+@media(max-width: 420px){
+    .main-content-title-main-info{
+        flex-direction: column;
+    }
+    .main-content-title-texts-title{
+        text-align:center;
+    }
+    .main-content-title-texts-description{
+        margin-top:0;
+    }
+}
+@media(max-width: 620px){
+    .infobox{
+        float:none;
+        margin:0 auto;
+        width:100%;
+    }
 }
